@@ -6,6 +6,10 @@ import MoreInfoStrip from "@/components/ui/MoreInfoStrip";
 import { WHATSAPP_MESSAGES, whatsappHref } from "@/lib/contact";
 import { SERVICE_CATALOG } from "@/lib/service-catalog";
 
+export function generateStaticParams() {
+  return SERVICE_CATALOG.map((service) => ({ id: service.id }));
+}
+
 export default async function ServicePromoPage({
   params,
 }: {
